@@ -1,0 +1,71 @@
+// roboto font face
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+
+// NeoDisplay font face
+@include font-face("NoeDisplay-Regular", "../fonts/NoeDisplay-Regular");
+
+// AvenirNextMedium font face
+@include font-face("Avenir-Next-Medium", "../fonts/AvenirNextMedium");
+
+// AvenirNextDemiBold font face
+@include font-face("AvenirNextDemiBold", "../fonts/AvenirNextDemiBold");
+
+// NoeDisplay Fonts stack
+$font-stack-NoeDisplay-Regular: (
+  "NoeDisplay-Regular",
+  sans-serif,
+);
+
+// fonts
+$d-font-size: 14px;
+$d-line-height: 28px;
+$d-font-weight: 300;
+$nav-font-size: 36px;
+$d-font-family: $font-stack-NoeDisplay-Regular;
+$nav-line-height: $nav-font-size + 3;
+$subnav-font-size: $d-font-size + 2;
+$subnav-line-height: $subnav-font-size + 6;
+
+$regularFontWeight: 400;
+$mediumFontWeight: 500;
+$boldFontWeight: 700;
+
+body{
+    // font-size: $d-font-size;
+    // line-height: $d-line-height;
+    // font-family: $d-font-family; 
+    // font-weight: $d-font-weight;   
+    -webkit-text-size-adjust: 100%; 
+    -moz-text-size-adjust:100%; 
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-font-smoothing:antialiased; 
+}
+
+a{
+    outline: none;
+    &:focus{
+        outline: none;        
+    }
+}
+
+// Heading fonts
+h2{
+    @include fonts(45px, 45px);
+    font-family: $d-font-family;
+}
+
+h6{
+    @include fonts(17px, $d-line-height + 3);
+    color: $tertiary-color;
+    letter-spacing: 3px;
+}
+
+// button
+.btn{
+    font-weight: $mediumFontWeight;
+}
+
+// lead text
+.lead-text{
+    @include fonts(18px, $d-line-height + 3, 300);
+}
